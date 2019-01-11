@@ -8,17 +8,17 @@ pipeline {
         }
         stage ( 'Compile') {
             steps {
-                sh '/opt/apache-maven-3.5.3/bin/mvn compile'
+                sh 'mvn compile'
             }
         }
         stage ( ' Test Cases') {
             steps {
-                sh '/opt/apache-maven-3.5.3/bin/mvn test'
+                sh 'mvn test'
             }
         }
         stage ( ' Package' ) {
             steps {
-                sh '/opt/apache-maven-3.5.3/bin/mvn package'
+                sh 'mvn package'
             }
         }
     }
